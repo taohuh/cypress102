@@ -27,3 +27,6 @@ Workshop cypress automated testing
  - `cy.clearCookie()`
  - `cy.clearCookies()`
 ## 6.Network Request
+- `cy.server()`
+- `cy.request()`
+- `cy.route()`
