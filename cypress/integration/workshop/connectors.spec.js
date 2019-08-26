@@ -23,7 +23,7 @@ describe('Connectors', () => {
 			.should('be.eq', 3);
 	});
 
-	it('.invoke() - invoke a function on the current subject', () => {
+	it.only('.invoke() - invoke a function on the current subject', () => {
 		// our div is hidden in our script.js
 		// $('.connectors-div').hide()
 		cy.get('.connectors-div')
@@ -34,6 +34,8 @@ describe('Connectors', () => {
 		cy.get('.connectors-div')
 			.invoke('show')
 			.should('be.visible');
+
+		//TODO: use invoke for hide connectors-div and assert it
 	});
 
 	it('.then() - invoke a callback function with the current subject', () => {
@@ -42,6 +44,7 @@ describe('Connectors', () => {
 			.then(($lis) => {
 				expect($lis, '3 items').to.have.length(3);
 				expect($lis.eq(0), 'first item').to.contain('Walk the dog');
+				//TODO: expect more li
 			});
 
 		cy.get('.connectors-list')
