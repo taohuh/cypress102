@@ -23,7 +23,7 @@ describe('Connectors', () => {
 			.should('be.eq', 3);
 	});
 
-	it.only('.invoke() - invoke a function on the current subject', () => {
+	it('.invoke() - invoke a function on the current subject', () => {
 		// our div is hidden in our script.js
 		// $('.connectors-div').hide()
 		cy.get('.connectors-div')
@@ -65,11 +65,12 @@ describe('Connectors', () => {
 		});
 
 		// Can't spread a object
-		const obj = {
-			name: 'Tao'
-		};
-		cy.wrap(obj).spread((obj) => {
-			cy.log(obj);
-		});
+		// const obj = {
+		// 	name: 'Tao'
+		// };
+
+		// cy.wrap(obj).spread((obj) => {
+		// 	cy.log(obj);
+		// });
 	});
 });
