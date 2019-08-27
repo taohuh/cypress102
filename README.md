@@ -23,7 +23,7 @@ Workshop cypress automated testing
 ## 5.Cookies
  - `cy.setCookie()`
  - `cy.getCookie()`
- - `cy.getCookie()`
+ - `cy.getCookies()`
  - `cy.clearCookie()`
  - `cy.clearCookies()`
 ## 6.Network Request
